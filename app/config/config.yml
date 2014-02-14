@@ -69,14 +69,28 @@ swiftmailer:
     spool:     { type: memory }
     
 sonata_admin:
-    title: Jobeet Admin
+    title: Locatari Admin
 
 sonata_block:
     default_contexts: [cms]
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
-
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
         sonata.block.service.text:
-        sonata.block.service.action:
         sonata.block.service.rss:
+ 
+ 
+# knp menu configuration (optional)
+knp_menu:
+    twig:
+        template: knp_menu.html.twig
+    templating: false
+    default_renderer: twig
+    
+mopa_bootstrap:
+    form: ~  # Adds twig form theme  support
+    menu: ~  # enables twig helpers for menu
+
+ 
